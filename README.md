@@ -11,3 +11,4 @@ See the guide at https://render.com/docs/deploy-strapi for more information.
 
 This is a test commit
 a second test commit
+a third commit, initially made from staging
