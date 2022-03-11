@@ -2,9 +2,11 @@ previewsEnabled: true
 previewsExpireAfterDays: 3
 services:
   - type: web
-    name: strapi prod
+    name: strapi-prod
     env: node
+    branch: master
     plan: starter
+    region: ohio
     buildCommand: yarn install && yarn build
     startCommand: yarn start
     healthCheckPath: /_health
@@ -28,9 +30,11 @@ services:
       - key: ADMIN_JWT_SECRET
         generateValue: true
   - type: web
-    name: strapi Staging
+    name: strapi-staging
     env: node
     plan: starter
+    branch: staging
+    region: ohio
     buildCommand: yarn install && yarn build
     startCommand: yarn start
     healthCheckPath: /_health
@@ -54,7 +58,13 @@ services:
       - key: ADMIN_JWT_SECRET
         generateValue: true
 databases:
-  - name: strapi-prod
+  - name: strapi-prod-db
     plan: starter
-  - name: strapi-staging
+    postgresMajorVersion: 14
+    user: admin
+    region: ohio
+  - name: strapi-staging-db
     plan: starter
+    user: admin
+    postgresMajorVersion: 14
+    region: ohio
