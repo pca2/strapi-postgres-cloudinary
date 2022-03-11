@@ -3,10 +3,7 @@ previewsExpireAfterDays: 3
 services:
   - type: web
     name: strapi
-    sync: false
     env: node
-    branch: master
-    sync: false  
     plan: starter
     region: ohio
     buildCommand: yarn install && yarn build
