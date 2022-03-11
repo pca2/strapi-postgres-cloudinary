@@ -7,3 +7,6 @@ To deploy, create a Cloudinary account and make note of your cloud name, api key
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
 See the guide at https://render.com/docs/deploy-strapi for more information.
+
+
+This is a test commit
