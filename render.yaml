@@ -4,7 +4,6 @@ services:
   - type: web
     name: strapi-prod
     env: node
-    branch: master
     plan: starter
     region: ohio
     buildCommand: yarn install && yarn build
@@ -33,7 +32,6 @@ services:
     name: strapi-staging
     env: node
     plan: starter
-    branch: staging
     region: ohio
     buildCommand: yarn install && yarn build
     startCommand: yarn start
